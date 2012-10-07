@@ -7,8 +7,10 @@
 
 #include <cstdlib>
 
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
 
+using namespace std;
 /*
  * 
  */
