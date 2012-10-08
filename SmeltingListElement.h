@@ -13,6 +13,8 @@ public:
     SmeltingListElement(double t, double f);
     SmeltingListElement(const SmeltingListElement& orig);
     virtual ~SmeltingListElement();
+    double GetTime();
+    double GetFerrum();
 private:
     double time;
     double ferrum;

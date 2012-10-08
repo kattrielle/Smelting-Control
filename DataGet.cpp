@@ -7,7 +7,6 @@
 
 #include "DataGet.h"
 
-#include <vector>
 
 DataGet::DataGet() {
 }

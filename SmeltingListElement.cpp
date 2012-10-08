@@ -18,3 +18,12 @@ SmeltingListElement::SmeltingListElement(const SmeltingListElement& orig) {
 SmeltingListElement::~SmeltingListElement() {
 }
 
+double SmeltingListElement::GetTime()
+{
+    return time;
+}
+
+double SmeltingListElement::GetFerrum()
+{
+    return ferrum;
+}

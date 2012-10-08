@@ -9,6 +9,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "DataGet.h"
+#include "SmeltingListElement.h"
+#include "DataExponent.h"
 
 using namespace std;
 /*
