@@ -16,7 +16,9 @@ public:
     virtual ~DataExponent();
 
     // Генерация результата замера в некоторый момент времени
-    double CountExponent( double time );
+    double CountMeasureResult( double time );
+    
+    void Get();
 private:
     double koeffA;
     double koeffB;

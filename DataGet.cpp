@@ -17,3 +17,7 @@ DataGet::DataGet(const DataGet& orig) {
 DataGet::~DataGet() {
 }
 
+void DataGet::Get()
+{
+    
+}

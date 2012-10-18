@@ -4,7 +4,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Исходные файлы "
                    projectFiles="true">
+      <itemPath>DataCombined.cpp</itemPath>
       <itemPath>DataExponent.cpp</itemPath>
+      <itemPath>DataFile.cpp</itemPath>
       <itemPath>DataGet.cpp</itemPath>
       <itemPath>SmeltingListElement.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -12,7 +14,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
                    projectFiles="true">
+      <itemPath>DataCombined.h</itemPath>
       <itemPath>DataExponent.h</itemPath>
+      <itemPath>DataFile.h</itemPath>
       <itemPath>DataGet.h</itemPath>
       <itemPath>SmeltingListElement.h</itemPath>
     </logicalFolder>

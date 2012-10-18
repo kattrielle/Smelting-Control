@@ -21,7 +21,12 @@ DataExponent::DataExponent(const DataExponent& orig) {
 DataExponent::~DataExponent() {
 }
 
-double DataExponent::CountExponent(double time)
+double DataExponent::CountMeasureResult(double time)
 {
-    return exp(koeffA*time+koeffB) + (2*randomRange*rand()/RAND_MAX - randomRange);
+    return exp(koeffA*time+koeffB) + randomRange * (2*rand()/RAND_MAX - 1);
+}
+
+void DataExponent::Get()
+{
+    
 }

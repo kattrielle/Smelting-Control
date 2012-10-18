@@ -7,12 +7,17 @@
 
 #ifndef DATACOMBINED_H
 #define	DATACOMBINED_H
+#include "DataGet.h"
 
-class DataCombined {
+class DataCombined : public DataGet {
 public:
-    DataCombined();
+    DataCombined(double a, double b, double r, double t);
     DataCombined(const DataCombined& orig);
     virtual ~DataCombined();
+    
+    // Генерация результата замера в некоторый момент времени
+    double CountMeasureResult( double time );
+    void Get();
 private:
     double koeffA;
     double koeffB;

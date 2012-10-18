@@ -13,6 +13,8 @@ SmeltingListElement::SmeltingListElement(double t, double f) {
 }
 
 SmeltingListElement::SmeltingListElement(const SmeltingListElement& orig) {
+    time = orig.time;
+    ferrum = orig.ferrum;
 }
 
 SmeltingListElement::~SmeltingListElement() {

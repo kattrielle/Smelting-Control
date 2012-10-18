@@ -13,6 +13,7 @@ public:
     DataGet();
     DataGet(const DataGet& orig);
     virtual ~DataGet();
+    void Get();
 private:
 };
 
