@@ -8,6 +8,7 @@
       <itemPath>DataExponent.cpp</itemPath>
       <itemPath>DataFile.cpp</itemPath>
       <itemPath>DataGet.cpp</itemPath>
+      <itemPath>SmeltingControl.cpp</itemPath>
       <itemPath>SmeltingListElement.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -18,6 +19,7 @@
       <itemPath>DataExponent.h</itemPath>
       <itemPath>DataFile.h</itemPath>
       <itemPath>DataGet.h</itemPath>
+      <itemPath>SmeltingControl.h</itemPath>
       <itemPath>SmeltingListElement.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"

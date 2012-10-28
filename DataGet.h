@@ -14,7 +14,11 @@ public:
     DataGet(const DataGet& orig);
     virtual ~DataGet();
     void Get();
-private:
+    void SetCurrentTime(double time);
+    void SetStartTime(double time);
+protected:
+    double currentTime;
+    double startTime;
 };
 
 #endif	/* DATAGET_H */

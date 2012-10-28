@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/DataExponent.o \
 	${OBJECTDIR}/SmeltingListElement.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/SmeltingControl.o \
 	${OBJECTDIR}/DataGet.o \
 	${OBJECTDIR}/DataFile.o \
 	${OBJECTDIR}/DataCombined.o
@@ -81,6 +82,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/SmeltingControl.o: SmeltingControl.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SmeltingControl.o SmeltingControl.cpp
 
 ${OBJECTDIR}/DataGet.o: DataGet.cpp 
 	${MKDIR} -p ${OBJECTDIR}

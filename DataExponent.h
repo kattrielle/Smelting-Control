@@ -11,7 +11,7 @@
 
 class DataExponent : public DataGet {
 public:
-    DataExponent(double a, double b, double r);
+    DataExponent(double a, double b, double rand, double tstep);
     DataExponent(const DataExponent& orig);
     virtual ~DataExponent();
 
@@ -23,7 +23,7 @@ private:
     double koeffA;
     double koeffB;
     double randomRange;
-
+    double timeStep;
 };
 
 #endif	/* DATAEXPONENT_H */

@@ -9,10 +9,12 @@
 #include "stdlib.h"
 #include "math.h"
 
-DataExponent::DataExponent(double a, double b, double r) {
+DataExponent::DataExponent(double a, double b, double rand, double tstep) {
     koeffA = a;
     koeffB = b;
-    randomRange = r;
+    randomRange = rand;
+    startTime = 0;
+    timeStep = tstep;
 }
 
 DataExponent::DataExponent(const DataExponent& orig) {

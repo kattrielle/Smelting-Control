@@ -12,6 +12,7 @@
 #include "DataGet.h"
 #include "SmeltingListElement.h"
 #include "DataExponent.h"
+#include "SmeltingControl.h"
 #include <list>
 #include <iostream>
 
@@ -19,6 +20,15 @@ using namespace std;
 /*
  * 
  */
+void testfunct( list<SmeltingListElement> el)
+{
+    list<SmeltingListElement>::iterator ptr;
+    for (ptr = el.begin(); ptr != el.end(); ptr++)
+    {
+        cout << "hello" << ptr->GetFerrum() << "\n";
+    }
+}
+
 int main(int argc, char** argv) 
 {
     
@@ -35,6 +45,10 @@ int main(int argc, char** argv)
    // SmeltingListElement el1 = *firstElem;
  //   cout << test.front().GetFerrum() << "\n";
 //    cout << (&el1)->GetFerrum() << "\n";
+//    testfunct( test);
+    SmeltingControl *tmp = new SmeltingControl();
+    tmp->SetMeasuresList(test);
+    cout tmp->GetMeasuresList().front()->GetFerrum()
     return 0;
 }
 

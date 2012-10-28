@@ -21,3 +21,13 @@ void DataGet::Get()
 {
     
 }
+
+void DataGet::SetCurrentTime(double time)
+{
+    currentTime = time;
+}
+
+void DataGet::SetStartTime(double time)
+{
+    startTime = time;
+}
