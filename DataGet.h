@@ -7,13 +7,16 @@
 
 #ifndef DATAGET_H
 #define	DATAGET_H
+#include "SmeltingListElement.h"
+#include <list>
+#include <stdlib.h>
 
 class DataGet {
 public:
     DataGet();
     DataGet(const DataGet& orig);
     virtual ~DataGet();
-    void Get();
+    void Get(list<SmeltingListElement> process);
     void SetCurrentTime(double time);
     void SetStartTime(double time);
 protected:

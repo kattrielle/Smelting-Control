@@ -28,7 +28,13 @@ double DataExponent::CountMeasureResult(double time)
     return exp(koeffA*time+koeffB) + randomRange * (2*rand()/RAND_MAX - 1);
 }
 
-void DataExponent::Get()
+void DataExponent::Get(list<SmeltingListElement> process)
 {
-    
+    double t = startTime;
+    while ( t<= currentTime )
+    {
+        process.push_back( SmeltingListElement( t, CountMeasureResult(t)) );
+        t+=timeStep;
+    };
+    startTime = currentTime + timeStep;
 }

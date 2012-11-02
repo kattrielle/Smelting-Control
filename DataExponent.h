@@ -18,12 +18,17 @@ public:
     // Генерация результата замера в некоторый момент времени
     double CountMeasureResult( double time );
     
-    void Get();
+    //заполнение списка результатов замера
+    void Get(list<SmeltingListElement> process);
+ //   void SetInvestigationTime( double time );
+ //   double GetInvestigationTime();
+    
 private:
     double koeffA;
     double koeffB;
     double randomRange;
     double timeStep;
+    double investigationTime;
 };
 
 #endif	/* DATAEXPONENT_H */

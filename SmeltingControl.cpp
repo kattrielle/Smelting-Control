@@ -21,7 +21,13 @@ SmeltingControl::~SmeltingControl() {
     return measures;
 }*/
 
-void SmeltingControl::SetMeasuresList(list<SmeltingListElement> tmp)
+void SmeltingControl::SetMeasuresList(list<SmeltingListElement> &tmp)
 {
     measures = tmp;
+}
+
+void SmeltingControl::ResumeObserving(double time)
+{
+    retrievingData->SetCurrentTime( time );
+    retrievingData->Get(measures);
 }

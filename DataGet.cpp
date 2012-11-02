@@ -17,10 +17,10 @@ DataGet::DataGet(const DataGet& orig) {
 DataGet::~DataGet() {
 }
 
-void DataGet::Get()
+/*void DataGet::Get(list<SmeltingListElement> process)
 {
-    
-}
+
+}*/
 
 void DataGet::SetCurrentTime(double time)
 {

@@ -11,17 +11,28 @@
 #include <list>
 #include <stdlib.h>
 #include "SmeltingListElement.h"
+#include "DataGet.h"
+#include "DataCombined.h"
 
 class SmeltingControl {
-public:
+public: 
     SmeltingControl();
     SmeltingControl(const SmeltingControl& orig);
     virtual ~SmeltingControl();
  //   list<SmeltingListElement> GetMeasuresList();
-    void SetMeasuresList( list<SmeltingListElement> tmp);
+    
+    void SetMeasuresList( list<SmeltingListElement> &tmp);
+    
+    //запуск сбора дополнительных данных
+    void ResumeObserving( double time );
+    
+    //общая функция подсчета оптимальной длительности процесса плавки
+    double CountOptimalTime();
 private:
 protected:
     list<SmeltingListElement> measures;
+    double ferrumOptimum;
+    DataGet *retrievingData;
 
 };
 
