@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/DataExponent.o \
+	${OBJECTDIR}/SmeltingControlPowder.o \
 	${OBJECTDIR}/SmeltingListElement.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/SmeltingControl.o \
@@ -72,6 +73,11 @@ ${OBJECTDIR}/DataExponent.o: DataExponent.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DataExponent.o DataExponent.cpp
+
+${OBJECTDIR}/SmeltingControlPowder.o: SmeltingControlPowder.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SmeltingControlPowder.o SmeltingControlPowder.cpp
 
 ${OBJECTDIR}/SmeltingListElement.o: SmeltingListElement.cpp 
 	${MKDIR} -p ${OBJECTDIR}

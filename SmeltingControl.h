@@ -32,7 +32,7 @@ private:
 protected:
     list<SmeltingListElement> measures;
     double ferrumOptimum;
-    DataGet *retrievingData;
+    DataGet *retrievingData; 
 
 };
 

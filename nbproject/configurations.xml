@@ -9,6 +9,7 @@
       <itemPath>DataFile.cpp</itemPath>
       <itemPath>DataGet.cpp</itemPath>
       <itemPath>SmeltingControl.cpp</itemPath>
+      <itemPath>SmeltingControlPowder.cpp</itemPath>
       <itemPath>SmeltingListElement.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -20,6 +21,7 @@
       <itemPath>DataFile.h</itemPath>
       <itemPath>DataGet.h</itemPath>
       <itemPath>SmeltingControl.h</itemPath>
+      <itemPath>SmeltingControlPowder.h</itemPath>
       <itemPath>SmeltingListElement.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
