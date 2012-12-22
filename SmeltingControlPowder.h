@@ -13,7 +13,7 @@
 
 class SmeltingControlPowder : public SmeltingControl {
 public:
-    SmeltingControlPowder();
+    SmeltingControlPowder(double ferrum);
     SmeltingControlPowder(const SmeltingControlPowder& orig);
     virtual ~SmeltingControlPowder();
 private:

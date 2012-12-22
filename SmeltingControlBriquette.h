@@ -8,7 +8,9 @@
 #ifndef SMELTINGCONTROLBRIQUETTE_H
 #define	SMELTINGCONTROLBRIQUETTE_H
 
-class SmeltingControlBriquette {
+#include "SmeltingControl.h"
+
+class SmeltingControlBriquette : public SmeltingControl {
 public:
     SmeltingControlBriquette();
     SmeltingControlBriquette(const SmeltingControlBriquette& orig);

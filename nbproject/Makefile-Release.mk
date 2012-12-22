@@ -40,7 +40,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/SmeltingListElement.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/SmeltingControl.o \
+	${OBJECTDIR}/Model.o \
 	${OBJECTDIR}/DataGet.o \
+	${OBJECTDIR}/SmeltingControlBriquette.o \
 	${OBJECTDIR}/DataFile.o \
 	${OBJECTDIR}/DataCombined.o
 
@@ -94,10 +96,20 @@ ${OBJECTDIR}/SmeltingControl.o: SmeltingControl.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/SmeltingControl.o SmeltingControl.cpp
 
+${OBJECTDIR}/Model.o: Model.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Model.o Model.cpp
+
 ${OBJECTDIR}/DataGet.o: DataGet.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/DataGet.o DataGet.cpp
+
+${OBJECTDIR}/SmeltingControlBriquette.o: SmeltingControlBriquette.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/SmeltingControlBriquette.o SmeltingControlBriquette.cpp
 
 ${OBJECTDIR}/DataFile.o: DataFile.cpp 
 	${MKDIR} -p ${OBJECTDIR}

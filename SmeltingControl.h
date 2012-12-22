@@ -12,27 +12,42 @@
 #include <stdlib.h>
 #include "SmeltingListElement.h"
 #include "DataGet.h"
+#include "DataExponent.h"
 #include "DataCombined.h"
+#include "Model.h"
+#include "stdio.h"
 
 class SmeltingControl {
 public: 
     SmeltingControl();
     SmeltingControl(const SmeltingControl& orig);
     virtual ~SmeltingControl();
- //   list<SmeltingListElement> GetMeasuresList();
     
-    void SetMeasuresList( list<SmeltingListElement> &tmp);
+    //
+    std::list<SmeltingListElement> GetMeasuresList();
+    
+    //
+    void SetMeasuresList( std::list<SmeltingListElement> &tmp);
     
     //запуск сбора дополнительных данных
     void ResumeObserving( double time );
     
     //общая функция подсчета оптимальной длительности процесса плавки
     double CountOptimalTime();
+    
+    //Функция вывода практических результатов наблюдений
+    void PrintMeasuresList();
 private:
 protected:
-    list<SmeltingListElement> measures;
+    //экспериментальные точки наблюдений
+    std::list<SmeltingListElement> measures;
     double ferrumOptimum;
+    double technologicalQuantile;
+    //заполнение данных по процессу
     DataGet *retrievingData; 
+    //подсчитанная модель текущего процесса
+    Model *countedModel;
+    Model *technologicalInterval;
 
 };
 

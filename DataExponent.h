@@ -8,7 +8,18 @@
 #ifndef DATAEXPONENT_H
 #define	DATAEXPONENT_H
 #include "DataGet.h"
+#include "stdlib.h"
+#include "math.h"
+#include "stdio.h"
 
+/**
+ * Описывает генерацию процесса плавки порошковой шихты - простую
+ * экспоненциальную модель вида E^(a + b*time) с наложением шумов
+ * @param a
+ * @param b
+ * @param rand - шумовой разброс
+ * @param tstep - временной шаг измерений
+ */
 class DataExponent : public DataGet {
 public:
     DataExponent(double a, double b, double rand, double tstep);
@@ -19,7 +30,7 @@ public:
     double CountMeasureResult( double time );
     
     //заполнение списка результатов замера
-    void Get(list<SmeltingListElement> process);
+    void Get(std::list<SmeltingListElement> *process);
  //   void SetInvestigationTime( double time );
  //   double GetInvestigationTime();
     
@@ -28,6 +39,7 @@ private:
     double koeffB;
     double randomRange;
     double timeStep;
+    //Зачем мне это было надо???
     double investigationTime;
 };
 

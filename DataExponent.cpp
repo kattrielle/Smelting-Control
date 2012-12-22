@@ -6,8 +6,6 @@
  */
 
 #include "DataExponent.h"
-#include "stdlib.h"
-#include "math.h"
 
 DataExponent::DataExponent(double a, double b, double rand, double tstep) {
     koeffA = a;
@@ -15,6 +13,7 @@ DataExponent::DataExponent(double a, double b, double rand, double tstep) {
     randomRange = rand;
     startTime = 0;
     timeStep = tstep;
+    currentTime = 0;
 }
 
 DataExponent::DataExponent(const DataExponent& orig) {
@@ -23,18 +22,32 @@ DataExponent::DataExponent(const DataExponent& orig) {
 DataExponent::~DataExponent() {
 }
 
+/**
+ * Генерация результата замера в некоторый момент времени
+ * @param time - время для генерации
+ * @return - сгенерированное значение результата замера
+ */
 double DataExponent::CountMeasureResult(double time)
 {
-    return exp(koeffA*time+koeffB) + randomRange * (2*rand()/RAND_MAX - 1);
+    return exp(koeffA + time*koeffB) + randomRange * (2*rand()/RAND_MAX - 1);
 }
 
-void DataExponent::Get(list<SmeltingListElement> process)
+/**
+ * Заполнение списка результатов замера по текущему процессу
+ * @param process - список результатов замеров
+ */
+void DataExponent::Get(std::list<SmeltingListElement> *process)
 {
+    printf("Hello there!\n");
+    if (currentTime == 0) {
+        printf("Не задана текущая длительность процесса\n");
+        return;
+    }
     double t = startTime;
     while ( t<= currentTime )
     {
-        process.push_back( SmeltingListElement( t, CountMeasureResult(t)) );
+        process->push_back( SmeltingListElement( t, CountMeasureResult(t)) );
         t+=timeStep;
     };
-    startTime = currentTime + timeStep;
+    startTime = t;
 }
