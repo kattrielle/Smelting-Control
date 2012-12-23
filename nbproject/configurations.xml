@@ -8,6 +8,7 @@
       <itemPath>DataExponent.cpp</itemPath>
       <itemPath>DataFile.cpp</itemPath>
       <itemPath>DataGet.cpp</itemPath>
+      <itemPath>LinearRegression.cpp</itemPath>
       <itemPath>Model.cpp</itemPath>
       <itemPath>SmeltingControl.cpp</itemPath>
       <itemPath>SmeltingControlBriquette.cpp</itemPath>
@@ -22,6 +23,7 @@
       <itemPath>DataExponent.h</itemPath>
       <itemPath>DataFile.h</itemPath>
       <itemPath>DataGet.h</itemPath>
+      <itemPath>LinearRegression.h</itemPath>
       <itemPath>Model.h</itemPath>
       <itemPath>SmeltingControl.h</itemPath>
       <itemPath>SmeltingControlBriquette.h</itemPath>

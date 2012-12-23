@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/DataExponent.o \
+	${OBJECTDIR}/LinearRegression.o \
 	${OBJECTDIR}/SmeltingControlPowder.o \
 	${OBJECTDIR}/SmeltingListElement.o \
 	${OBJECTDIR}/main.o \
@@ -75,6 +76,11 @@ ${OBJECTDIR}/DataExponent.o: DataExponent.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DataExponent.o DataExponent.cpp
+
+${OBJECTDIR}/LinearRegression.o: LinearRegression.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/LinearRegression.o LinearRegression.cpp
 
 ${OBJECTDIR}/SmeltingControlPowder.o: SmeltingControlPowder.cpp 
 	${MKDIR} -p ${OBJECTDIR}

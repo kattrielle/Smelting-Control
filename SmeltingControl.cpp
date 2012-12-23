@@ -58,3 +58,15 @@ void SmeltingControl::PrintMeasuresList() {
         printf("Содержание оксида железа: %lf\n", ptr->GetFerrum());
     }
 }
+
+/**
+ * Подсчет "линейной" регрессионной модели для экспоненциального набора точек
+ * @param points - список двумерных точек (замеров)
+ * @param regressionResult - объект итоговой экспоненциальной кривой
+ * @param offset - смещение по y
+ */
+void SmeltingControl::CountRegressionModel(std::list<SmeltingListElement> points, 
+        Model* regressionResult, double offset)
+{
+    LinearRegression::LinearRegressionFromExponent(points, regressionResult,offset);
+}

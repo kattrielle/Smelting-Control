@@ -16,6 +16,7 @@
 #include "DataCombined.h"
 #include "Model.h"
 #include "stdio.h"
+#include "LinearRegression.h"
 
 class SmeltingControl {
 public: 
@@ -37,6 +38,7 @@ public:
     
     //Функция вывода практических результатов наблюдений
     void PrintMeasuresList();
+    
 private:
 protected:
     //экспериментальные точки наблюдений
@@ -46,8 +48,12 @@ protected:
     //заполнение данных по процессу
     DataGet *retrievingData; 
     //подсчитанная модель текущего процесса
-    Model *countedModel;
+    Model *countedRegressionModel;
     Model *technologicalInterval;
+    
+    //Подсчет линейной регрессии для экспоненциальных замеров
+    void CountRegressionModel(std::list<SmeltingListElement> points,
+    Model *regressionResult, double offset);
 
 };
 
