@@ -12,10 +12,12 @@
 
 class SmeltingControlBriquette : public SmeltingControl {
 public:
-    SmeltingControlBriquette();
+    SmeltingControlBriquette(double ferrum, double quantile);
     SmeltingControlBriquette(const SmeltingControlBriquette& orig);
     virtual ~SmeltingControlBriquette();
 private:
+    //Начальные измерения, изменяющиеся по линейному закону
+    std::list<SmeltingListElement> linearPartData;
 
 };
 

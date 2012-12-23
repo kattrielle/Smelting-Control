@@ -45,7 +45,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/DataGet.o \
 	${OBJECTDIR}/SmeltingControlBriquette.o \
 	${OBJECTDIR}/DataFile.o \
-	${OBJECTDIR}/DataCombined.o
+	${OBJECTDIR}/DataCombined.o \
+	${OBJECTDIR}/DistanceCount.o
 
 
 # C Compiler Flags
@@ -126,6 +127,11 @@ ${OBJECTDIR}/DataCombined.o: DataCombined.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/DataCombined.o DataCombined.cpp
+
+${OBJECTDIR}/DistanceCount.o: DistanceCount.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/DistanceCount.o DistanceCount.cpp
 
 # Subprojects
 .build-subprojects:

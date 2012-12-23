@@ -6,12 +6,12 @@
  */
 
 #include "SmeltingControlPowder.h"
-#include "stdio.h"
 
-SmeltingControlPowder::SmeltingControlPowder(double ferrum) 
+SmeltingControlPowder::SmeltingControlPowder(double ferrum, double quantile) 
 {
     double a, b, rand, tstep;
     ferrumOptimum = ferrum;
+    technologicalQuantile = quantile;
     printf("Введите параметры моделируемого процесса\n");
     scanf("%lf %lf %lf %lf", &a, &b, &rand, &tstep);
     retrievingData = new DataExponent(a, b, rand, tstep);

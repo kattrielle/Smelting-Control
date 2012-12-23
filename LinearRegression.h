@@ -14,6 +14,9 @@
 #include <list>
 #include <math.h>
 
+/**
+ * Построение линейных регрессионных моделей
+ */
 class LinearRegression {
 public:
     LinearRegression();

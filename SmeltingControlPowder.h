@@ -9,11 +9,11 @@
 #define	SMELTINGCONTROLPOWDER_H
 
 #include "SmeltingControl.h"
-
+#include "stdio.h"
 
 class SmeltingControlPowder : public SmeltingControl {
 public:
-    SmeltingControlPowder(double ferrum);
+    SmeltingControlPowder(double ferrum, double quantile);
     SmeltingControlPowder(const SmeltingControlPowder& orig);
     virtual ~SmeltingControlPowder();
 private:

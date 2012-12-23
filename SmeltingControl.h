@@ -17,6 +17,7 @@
 #include "Model.h"
 #include "stdio.h"
 #include "LinearRegression.h"
+#include "DistanceCount.h"
 
 class SmeltingControl {
 public: 
@@ -49,11 +50,14 @@ protected:
     DataGet *retrievingData; 
     //подсчитанная модель текущего процесса
     Model *countedRegressionModel;
+    //модель 
     Model *technologicalInterval;
     
     //Подсчет линейной регрессии для экспоненциальных замеров
-    void CountRegressionModel(std::list<SmeltingListElement> points,
+    virtual void CountRegressionModel(std::list<SmeltingListElement> points,
     Model *regressionResult, double offset);
+    
+    double CountTechnologicalDislance();
 
 };
 

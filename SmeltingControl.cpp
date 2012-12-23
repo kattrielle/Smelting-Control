@@ -44,6 +44,8 @@ void SmeltingControl::ResumeObserving(double time)
 double SmeltingControl::CountOptimalTime()
 {
     double optimalTime;
+    CountRegressionModel( measures, countedRegressionModel, 0);
+    CountTechnologicalInterval();
     optimalTime = technologicalInterval->CountArgumentValue( ferrumOptimum );
 }
 
