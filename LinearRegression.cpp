@@ -23,7 +23,7 @@ LinearRegression::~LinearRegression() {
  * @param regressionResult - результирующее уравнение
  * @param offset - смещение l
  */
-static void LinearRegression::LinearRegressionFromExponent
+void LinearRegression::LinearRegressionFromExponent
         (std::list<SmeltingListElement> points, Model* regressionResult, 
         double offset)
 {
@@ -46,7 +46,7 @@ static void LinearRegression::LinearRegressionFromExponent
  * @param a - коэффициент модели
  * @param b - коэффициент модели
  */
-static void LinearRegression::CountLinearRegression(std::list<double> x,
+void LinearRegression::CountLinearRegression(std::list<double> x,
         std::list<double> y, double* a, double* b)
 {
     double meanX, meanY, meanXY, S2X;
@@ -63,7 +63,7 @@ static void LinearRegression::CountLinearRegression(std::list<double> x,
  * @param points - набор значений случайной величины
  * @return - выборочное среднее
  */
-static double LinearRegression::CountListMean(std::list<double> points)
+double LinearRegression::CountListMean(std::list<double> points)
 {
     double sum;
     std::list<double>::iterator ptr;
@@ -80,7 +80,7 @@ static double LinearRegression::CountListMean(std::list<double> points)
  * @param pY - набор значений 2й случайной величины
  * @return - выборочное среднее
  */
-static double LinearRegression::CountListProductMean(std::list<double> pX, 
+double LinearRegression::CountListProductMean(std::list<double> pX, 
         std::list<double> pY)
 {
     double sum;
@@ -101,7 +101,7 @@ static double LinearRegression::CountListProductMean(std::list<double> pX,
  * @param mean - выборочное среднее 
  * @return - выборочная дисперсия
  */
-static double LinearRegression::CountListVariance(std::list<double> points, 
+double LinearRegression::CountListVariance(std::list<double> points, 
         double mean)
 {
     double sum;

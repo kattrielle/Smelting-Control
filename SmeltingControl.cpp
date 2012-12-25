@@ -70,5 +70,14 @@ void SmeltingControl::PrintMeasuresList() {
 void SmeltingControl::CountRegressionModel(std::list<SmeltingListElement> points, 
         Model* regressionResult, double offset)
 {
-    LinearRegression::LinearRegressionFromExponent(points, regressionResult,offset);
+    LinearRegression::LinearRegressionFromExponent(points, regressionResult, offset);
+}
+
+/**
+ * Подсчет экспоненциальной модели технологического доверительного интервала
+ * для модели текущего процесса
+ */
+void SmeltingControl::CountTechnologicalInterval()
+{
+    
 }

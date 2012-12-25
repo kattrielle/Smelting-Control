@@ -8,11 +8,13 @@
       <itemPath>DataExponent.cpp</itemPath>
       <itemPath>DataFile.cpp</itemPath>
       <itemPath>DataGet.cpp</itemPath>
+      <itemPath>DistanceCount.cpp</itemPath>
       <itemPath>LinearRegression.cpp</itemPath>
       <itemPath>Model.cpp</itemPath>
       <itemPath>SmeltingControl.cpp</itemPath>
       <itemPath>SmeltingControlBriquette.cpp</itemPath>
       <itemPath>SmeltingControlPowder.cpp</itemPath>
+      <itemPath>SmeltingFinalMeasures.cpp</itemPath>
       <itemPath>SmeltingListElement.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -23,11 +25,13 @@
       <itemPath>DataExponent.h</itemPath>
       <itemPath>DataFile.h</itemPath>
       <itemPath>DataGet.h</itemPath>
+      <itemPath>DistanceCount.h</itemPath>
       <itemPath>LinearRegression.h</itemPath>
       <itemPath>Model.h</itemPath>
       <itemPath>SmeltingControl.h</itemPath>
       <itemPath>SmeltingControlBriquette.h</itemPath>
       <itemPath>SmeltingControlPowder.h</itemPath>
+      <itemPath>SmeltingFinalMeasures.h</itemPath>
       <itemPath>SmeltingListElement.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -45,8 +49,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>DistanceCount.cpp</itemPath>
-    <itemPath>DistanceCount.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

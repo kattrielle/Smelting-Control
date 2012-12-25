@@ -46,7 +46,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/SmeltingControlBriquette.o \
 	${OBJECTDIR}/DataFile.o \
 	${OBJECTDIR}/DataCombined.o \
-	${OBJECTDIR}/DistanceCount.o
+	${OBJECTDIR}/DistanceCount.o \
+	${OBJECTDIR}/SmeltingFinalMeasures.o
 
 
 # C Compiler Flags
@@ -132,6 +133,11 @@ ${OBJECTDIR}/DistanceCount.o: DistanceCount.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DistanceCount.o DistanceCount.cpp
+
+${OBJECTDIR}/SmeltingFinalMeasures.o: SmeltingFinalMeasures.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SmeltingFinalMeasures.o SmeltingFinalMeasures.cpp
 
 # Subprojects
 .build-subprojects:

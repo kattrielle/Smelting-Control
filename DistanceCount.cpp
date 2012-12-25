@@ -23,7 +23,7 @@ DistanceCount::~DistanceCount() {
  * @param quantile
  * @return 
  */
-static double DistanceCount::CountMeasuresQuantile(Model* exponentLine, 
+double DistanceCount::CountMeasuresQuantile(Model* exponentLine, 
         std::list<SmeltingListElement> points, double quantile)
 {
     

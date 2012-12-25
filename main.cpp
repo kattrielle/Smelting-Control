@@ -52,7 +52,7 @@ int main(int argc, char** argv)
     //tmp->SetMeasuresList(test);
     //cout tmp->GetMeasuresList().front()->GetFerrum();
     
-    SmeltingControlPowder *test = new SmeltingControlPowder( 7 );
+    SmeltingControlPowder *test = new SmeltingControlPowder( 7, 0.95 );
     test->ResumeObserving( 10 );
     test->PrintMeasuresList();
     //test->CountOptimalTime();

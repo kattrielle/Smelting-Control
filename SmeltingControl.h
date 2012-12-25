@@ -57,7 +57,8 @@ protected:
     virtual void CountRegressionModel(std::list<SmeltingListElement> points,
     Model *regressionResult, double offset);
     
-    double CountTechnologicalDislance();
+    //Подсчет экспоненциальной модели технологического доверительного интервала
+    void CountTechnologicalInterval();
 
 };
 

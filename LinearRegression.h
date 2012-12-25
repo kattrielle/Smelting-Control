@@ -25,7 +25,7 @@ public:
     
     //Подсчет линейной регрессионной модели Y = a + b * X
     static void CountLinearRegression(std::list<double> x, std::list<double> y,
-    double *a, double *b);
+        double *a, double *b);
     
     //Построение регрессионной кривой для набора точек с экспоненциальной зависмостью
     static void LinearRegressionFromExponent(std::list<SmeltingListElement> points,
